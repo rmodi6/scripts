@@ -1,5 +1,10 @@
 tell application "System Events"
 	tell application process "Flux"
+		set frontmost to true
+	end tell
+end tell
+tell application "System Events"
+	tell application process "Flux"
 		tell menu bar 1
 			tell menu bar item 1
 				try
