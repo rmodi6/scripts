@@ -1,0 +1,23 @@
+[user]
+        name = Ruchit Modi
+        email = modi.ruchit6@gmail.com
+[alias]
+        ci = commit
+        st = status
+        di = diff
+        co = checkout
+        br = branch
+        ft = fetch
+        k = !gitk --all
+        d = difftool
+        lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[color]
+        ui = true
+[diff]
+        tool = meld
+[core]
+        excludesfile = ~/.gitignore_global
+	autocrlf = input
+        editor = 'subl' --wait
+[credential]
+        helper = osxkeychain
