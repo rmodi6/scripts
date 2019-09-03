@@ -1,3 +1,5 @@
+# https://leetcode.com/problems/jump-game/
+
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
         reachableIndex = 0
@@ -9,4 +11,3 @@ class Solution:
         if reachableIndex >= destIndex:
             return True
         return False
-        
