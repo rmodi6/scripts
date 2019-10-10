@@ -1,5 +1,6 @@
 #!/bin/bash
 # Script to mount windows bitlocker partition on linux
+set -e
 mkdir -p /media/bitlocker
 mkdir -p /media/mount
 sudo dislocker -V /dev/nvme0n1p3 -- /media/bitlocker
