@@ -9,10 +9,7 @@
 class Solution:
     def middleNode(self, head: ListNode) -> ListNode:
         p, q = head, head
-        i = 0
-        while p.next:
-            p = p.next
-            if i % 2 == 0:
-                q = q.next
-            i += 1
+        while p and p.next:
+            p = p.next.next
+            q = q.next
         return q
