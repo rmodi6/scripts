@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Call the original 'gnome-screenshot' and pass it all command-line arguments:
+/usr/bin/gnome-screenshot "$@"
+
+# Insert your own script here:
+LATEST=/home/rmodi/Pictures/$(ls /home/rmodi/Pictures/ -rt | grep -i screenshot | tail -n 1)
+set -f
+python3 /home/rmodi/scripts/screenshot_to_slack.py "$LATEST"
