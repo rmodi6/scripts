@@ -2,7 +2,6 @@ alias ll="exa -lha --git"
 alias ..="cd .."
 alias colc="column -s, -t"
 alias colt="column -s\t -t"
-#alias oneplus6t="-p 8022 192.168.1.125"
 
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 # export CUDADIR=/usr/local/cuda-10.0
@@ -18,8 +17,13 @@ function hibernate
 	sudo systemctl hibernate
 end
 
+function logout
+	loginctl lock-session
+end
+
 # . /home/rmodi/torch/install/bin/torch-activate
 
 function ssh_oneplus6t
-	ssh -p 8022 192.168.1.125
+	set IP (ip n | grep -i 'MAC_ADDRESS' | awk '{print $1}')
+	ssh -p 8022 $IP
 end
