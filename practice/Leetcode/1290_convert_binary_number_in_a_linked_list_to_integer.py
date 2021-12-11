@@ -13,3 +13,15 @@ class Solution:
             n += str(head.val)
             head = head.next
         return int(n, 2)
+
+# Alternate solution
+
+class Solution:
+    def getDecimalValue(self, head: ListNode) -> int:
+        return self.getDecimalValueUtil(head)[0]
+    
+    def getDecimalValueUtil(self, node):
+        if node is None:
+            return 0, -1
+        val, index = self.getDecimalValueUtil(node.next)
+        return node.val * (2**(index+1)) + val, index+1
